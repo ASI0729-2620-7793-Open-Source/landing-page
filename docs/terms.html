@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-i18n="terms.pageTitle">Terms of Use · Nubi</title>
+<meta name="description" content="Terms of use, privacy policy and accessibility statement of Nubi, a Macally product." data-i18n-content="terms.metaDescription">
+<meta name="keywords" content="nubi, terms of use, privacy policy, accessibility, ethics" data-i18n-content="terms.metaKeywords">
+<meta name="author" content="Macally">
+<link rel="icon" type="image/png" href="images/logo-nubi.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&display=swap" rel="stylesheet">
+<style>
+  :root { --dark: #00373E; --mint: #4CCBBB; --peach: #F9E6D0; --page: #F7F6F4; --line: #E4E1DB; }
+  *, *::before, *::after { box-sizing: border-box; }
+  body { margin: 0; background: var(--page); color: var(--dark); font-family: 'Bricolage Grotesque', system-ui, -apple-system, 'Segoe UI', sans-serif; font-size: 18px; line-height: 1.6; }
+  :focus-visible { outline: 3px solid var(--mint); outline-offset: 3px; }
+  a { color: inherit; }
+  .skip-link { position: absolute; left: 16px; top: -64px; background: var(--dark); color: #fff; padding: 12px 20px; border-radius: 999px; font-weight: 700; }
+  .skip-link:focus { top: 12px; }
+  header { max-width: 860px; margin: 0 auto; padding: 24px 20px 0; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+  header img { width: 62px; height: 77px; object-fit: fill; }
+  .back { font-weight: 700; padding: 12px 8px; }
+  .lang-switch { display: inline-flex; border: 1.5px solid var(--dark); border-radius: 999px; overflow: hidden; }
+  .lang-btn { border: 0; background: transparent; color: var(--dark); font: inherit; font-size: 13px; font-weight: 700; padding: 8px 12px; min-width: 44px; min-height: 36px; cursor: pointer; }
+  .lang-btn[aria-pressed="true"] { background: var(--dark); color: #fff; }
+  main { max-width: 860px; margin: 24px auto 64px; padding: 0 20px; }
+  h1 { font-size: clamp(30px, 4vw + 12px, 44px); line-height: 1.15; margin: 0 0 16px; }
+  h2 { font-size: 30px; margin: 48px 0 8px; padding-top: 8px; border-top: 1px solid var(--line); }
+  h3 { font-size: 20px; margin: 24px 0 4px; }
+  p { margin: 0 0 12px; max-width: 70ch; }
+  .updated { background: var(--peach); border-radius: 24px; padding: 20px 24px; }
+  footer { border-top: 1px solid var(--line); padding: 24px 20px 40px; text-align: center; font-size: 14px; }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main" data-i18n="k166">Skip to main content</a>
+<header>
+  <a href="index.html" aria-label="Nubi – home" data-i18n-aria-label="k003"><img src="images/logo-nubi.png" alt="Nubi"></a>
+  <div style="display:flex;align-items:center;gap:16px">
+    <a class="back" href="index.html" data-i18n="terms.back">Back to home</a>
+    <div class="lang-switch" role="group" aria-label="Language / Idioma">
+      <button type="button" class="lang-btn" data-lang="en" lang="en" aria-pressed="true" aria-label="Switch language to English" data-i18n-aria-label="k168">EN</button>
+      <button type="button" class="lang-btn" data-lang="es" lang="es-419" aria-pressed="false" aria-label="Switch language to Spanish" data-i18n-aria-label="k169">ES</button>
+    </div>
+  </div>
+</header>
+<main id="main">
+  <h1 data-i18n="terms.h1">Terms of use, privacy and accessibility</h1>
+  <p class="updated" data-i18n="terms.updated">Last updated: September 2026. Nubi is an academic project developed by the Macally team (Software Engineering, UPC) and is still under development: some features described on this site are planned and not yet available. By using this site and the Nubi Web Application you accept these terms.</p>
+
+  <section id="terms" aria-labelledby="terms-title">
+    <h2 id="terms-title" data-i18n="terms.h2.terms">Terms of use</h2>
+    <h3 data-i18n="terms.scope.h">1. Purpose and scope</h3><p data-i18n="terms.scope.p">Nubi offers operational support tools (SOS Mode, self-regulation stimuli, an Augmentative and Alternative Communication board and a support network) for neurodivergent children and teenagers and their caregivers. Nubi does not diagnose, treat or replace care from health professionals.</p>
+    <h3 data-i18n="terms.emergency.h">2. Emergencies</h3><p data-i18n="terms.emergency.p">If a person is at risk of harm, call the local emergency services immediately. Nubi must not be the only response to a medical emergency.</p>
+    <h3 data-i18n="terms.use.h">3. Responsible use</h3><p data-i18n="terms.use.p">The caregiver is responsible for the accuracy of the information recorded in a profile and for using it in the best interest of the person in their care. Nubi does not validate declared diagnoses.</p>
+    <h3 data-i18n="terms.ethics.h">4. Ethical commitments</h3><p data-i18n="terms.ethics.p">The team applies the principles of the ACM/IEEE-CS Software Engineering Code of Ethics and Professional Practice and the Code of Ethics of the Colegio de Ingenieros del Perú (CIP): acting in the public interest, being honest and transparent about what the product can and cannot do, respecting the privacy and dignity of users, and taking professional responsibility throughout the product lifecycle.</p>
+  </section>
+
+  <section id="privacy" aria-labelledby="privacy-title">
+    <h2 id="privacy-title" data-i18n="terms.h2.privacy">Privacy policy</h2>
+    <p data-i18n="terms.privacy.p1">Nubi processes personal data, including data about minors, in accordance with Peruvian Law No. 29733 on personal data protection. We only collect the data needed to personalize the tool, we do not show advertising and we do not sell data.</p>
+    <p data-i18n="terms.privacy.p2">Episode reports are shared with health professionals only when the caregiver decides to share them. You can request access to, correction of or deletion of your data through the contact details on this site.</p>
+  </section>
+
+  <section id="accessibility" aria-labelledby="a11y-title">
+    <h2 id="a11y-title" data-i18n="terms.h2.accessibility">Accessibility and languages statement</h2>
+    <p data-i18n="terms.a11y.p1">Nubi is designed to be inclusive: semantic HTML, ARIA attributes, keyboard navigation, sufficient color contrast and a low-stimulation option. The site is available in English (en_US) and Latin American Spanish (es_419); English is the default language.</p>
+    <p data-i18n="terms.a11y.p2">If you find an accessibility barrier, write to us from the contact section so we can fix it.</p>
+  </section>
+
+  <p data-i18n="terms.changes" style="margin-top:32px">Changes to these terms will be published on this page.</p>
+</main>
+<footer><span data-i18n="k153">© 2026 Nubi · Macally. All rights reserved.</span></footer>
+<script src="i18n.js"></script>
+</body>
+</html>
