@@ -22,7 +22,7 @@ body {
   margin: 0;
   background: var(--page);
   color: var(--dark);
-  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  font-family: 'Bricolage Grotesque', system-ui, -apple-system, 'Segoe UI', sans-serif;
   font-size: 16px;
   line-height: 1.4;
   -webkit-font-smoothing: antialiased;
@@ -340,12 +340,42 @@ footer { position: relative; margin-top: 122px; background: var(--dark); color: 
 .footer-made { grid-column: 3; text-align: right; font-size: 12px; margin-top: 60px; margin-right: 200px; }
 .footer-art { position: absolute; right: 0; bottom: 5px; width: 213px; height: 244px; z-index: 0; }
 
+/* ---------- Accessibility & i18n additions ---------- */
+.skip-link { position: absolute; left: 16px; top: -64px; z-index: 100; background: var(--dark); color: #fff; padding: 12px 20px; border-radius: 999px; font-weight: 700; transition: top .15s ease; }
+.skip-link:focus { top: 12px; }
+.lang-switch { display: inline-flex; border: 1.5px solid var(--dark); border-radius: 999px; overflow: hidden; }
+.lang-btn { border: 0; background: transparent; color: var(--dark); font-size: 13px; font-weight: 700; padding: 8px 12px; min-width: 44px; min-height: 36px; }
+.lang-btn[aria-pressed="true"] { background: var(--dark); color: #fff; }
+.nav-toggle { display: none; width: 48px; height: 48px; border: 1.5px solid var(--dark); border-radius: 50%; background: transparent; align-items: center; justify-content: center; padding: 0; }
+.nav-toggle .bars, .nav-toggle .bars::before, .nav-toggle .bars::after { display: block; width: 20px; height: 2.5px; background: var(--dark); border-radius: 2px; content: ""; position: relative; }
+.nav-toggle .bars::before { position: absolute; top: -7px; }
+.nav-toggle .bars::after { position: absolute; top: 7px; }
+.mobile-menu { grid-column: 1 / -1; background: #fff; border-radius: 24px; margin-top: 12px; padding: 12px; box-shadow: 0 8px 24px rgba(0, 55, 62, .12); }
+.mobile-menu[hidden] { display: none; }
+.mobile-menu ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; }
+.mobile-menu a { display: block; padding: 14px 16px; border-radius: 12px; font-size: 16px; font-weight: 600; }
+.mobile-menu a:hover { background: var(--chip); }
+.mobile-menu .menu-account a.btn { margin-top: 8px; padding: 14px 24px; color: #fff; }
+@media (min-width: 821px) { .mobile-menu .menu-account { display: none; } }
+.faq-entry { background: #fff; border-radius: 30px; }
+.faq-entry summary.faq-item { list-style: none; cursor: pointer; background: transparent; }
+.faq-entry summary.faq-item::-webkit-details-marker { display: none; }
+.faq-entry[open] .plus::after { display: none; }
+.faq-answer { padding: 0 35px 28px; font-size: 17px; line-height: 1.5; }
+.contact-form input:focus-visible, .contact-form textarea:focus-visible { outline: 3px solid var(--mint); outline-offset: 4px; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+}
+
 /* ---------- Responsive ---------- */
 @media (max-width: 1180px) {
   :root { --gutter: 40px; }
   .nav { padding-inline: 40px; }
-  .nav-links a:nth-child(n+3) { display: none; }
+  .nav { grid-template-columns: auto 1fr auto; column-gap: 12px; }
+  .nav-left { display: none; }
   .nav-right a:not(.login):not(.btn) { display: none; }
+  .nav-toggle { display: inline-flex; }
   .problem, .how, .faq, .benefits, .team { padding-inline: 0; }
   .hero h1 { font-size: 56px; }
   .hero-left { width: 300px; height: 442px; }
@@ -364,8 +394,11 @@ footer { position: relative; margin-top: 122px; background: var(--dark); color: 
 @media (max-width: 820px) {
   :root { --gutter: 20px; }
   .section { margin-top: 80px; }
-  .nav { grid-template-columns: auto 1fr; padding-inline: 20px; }
-  .nav-left { display: none; }
+  .nav { padding-inline: 20px; }
+  .nav-actions { margin-left: 0; }
+  .nav-actions .login, .nav-actions .btn { display: none; }
+  .btn { white-space: normal; text-align: center; }
+  .tabs { flex-wrap: wrap; }
   .nav-logo img { width: 62px; height: 77px; }
   .nav-right { gap: 8px; }
   .hero { border-radius: 40px; height: 620px; }
