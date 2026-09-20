@@ -1,13 +1,22 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nubi · Acompáñalo, incluso en los momentos difíciles</title>
-<meta name="description" content="Nubi guía a cuidadores y ayuda a niños y adolescentes neurodivergentes a calmarse y comunicarse durante episodios de desregulación.">
+<title data-i18n="meta.title">Nubi · Be there, even in the hardest moments</title>
+<meta name="description" content="Nubi guides caregivers and helps neurodivergent children and teenagers calm down and communicate during dysregulation episodes." data-i18n-content="meta.description">
+<meta name="keywords" content="nubi, neurodivergence, autism, ADHD, caregivers, SOS mode, self-regulation, augmentative and alternative communication" data-i18n-content="meta.keywords">
+<meta name="author" content="Macally">
+<meta name="theme-color" content="#00373E">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Nubi">
+<meta property="og:title" content="Nubi · Be there, even in the hardest moments" data-i18n-content="meta.title">
+<meta property="og:description" content="Nubi guides caregivers and helps neurodivergent children and teenagers calm down and communicate during dysregulation episodes." data-i18n-content="meta.description">
+<meta property="og:image" content="images/logo-nubi.png">
+<link rel="icon" type="image/png" href="images/logo-nubi.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -31,24 +40,45 @@
   </defs>
 </svg>
 
+<a class="skip-link" href="#inicio" data-i18n="k166">Skip to main content</a>
+
 <div class="page">
 
   <!-- NAV -->
   <header class="nav">
-    <nav class="nav-links nav-left" aria-label="Principal">
-      <a href="#perfil">Perfil</a>
-      <a href="#sos">Modo SOS</a>
-      <a href="#autocuidado">Autocuidado</a>
-      <a href="#planes">Planes</a>
+    <nav class="nav-links nav-left" aria-label="Main" data-i18n-aria-label="k001">
+      <a href="#perfil" data-i18n="k004">Profile</a>
+      <a href="#sos" data-i18n="k005">SOS Mode</a>
+      <a href="#autocuidado" data-i18n="k006">Self-care</a>
+      <a href="#planes" data-i18n="k007">Plans</a>
     </nav>
-    <a class="nav-logo" href="#inicio" aria-label="Nubi – inicio"><img src="images/logo-nubi.png" alt="Nubi"></a>
-    <nav class="nav-links nav-right" aria-label="Secundaria">
-      <a href="#comunicacion">Comunicación</a>
-      <a href="#apoyo">Apoyo</a>
+    <a class="nav-logo" href="#inicio" aria-label="Nubi – home" data-i18n-aria-label="k003"><img src="images/logo-nubi.png" alt="Nubi"></a>
+    <nav class="nav-links nav-right" aria-label="Secondary" data-i18n-aria-label="k002">
+      <a href="#comunicacion" data-i18n="k008">Communication</a>
+      <a href="#apoyo" data-i18n="k009">Support</a>
       <div class="nav-actions">
-        <a class="login" href="#contacto">Iniciar sesión</a>
-        <a class="btn btn-dark" href="#planes">Comenzar gratis</a>
+        <div class="lang-switch" role="group" aria-label="Language / Idioma">
+          <button type="button" class="lang-btn" data-lang="en" lang="en" aria-pressed="true" aria-label="Switch language to English" data-i18n-aria-label="k168">EN</button>
+          <button type="button" class="lang-btn" data-lang="es" lang="es-419" aria-pressed="false" aria-label="Switch language to Spanish" data-i18n-aria-label="k169">ES</button>
+        </div>
+        <a class="login" href="#contacto" data-app-route="login" data-i18n="k010">Log in</a>
+        <a class="btn btn-dark" href="#planes" data-app-route="signup" data-i18n="k011">Get started free</a>
       </div>
+    </nav>
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu" data-i18n-aria-label="k167"><span class="bars" aria-hidden="true"></span></button>
+    <nav class="mobile-menu" id="mobile-menu" hidden aria-label="Mobile navigation menu" data-i18n-aria-label="k170">
+      <ul>
+        <li><a href="#perfil" data-i18n="k004">Profile</a></li>
+        <li><a href="#sos" data-i18n="k005">SOS Mode</a></li>
+        <li><a href="#autocuidado" data-i18n="k006">Self-care</a></li>
+        <li><a href="#comunicacion" data-i18n="k008">Communication</a></li>
+        <li><a href="#apoyo" data-i18n="k009">Support</a></li>
+        <li><a href="#planes" data-i18n="k007">Plans</a></li>
+        <li><a href="#faq" data-i18n="k108">Frequently asked questions</a></li>
+        <li><a href="#contacto" data-i18n="k160">Contact</a></li>
+        <li class="menu-account"><a href="#contacto" data-app-route="login" data-i18n="k010">Log in</a></li>
+        <li class="menu-account"><a class="btn btn-dark" href="#planes" data-app-route="signup" data-i18n="k011">Get started free</a></li>
+      </ul>
     </nav>
   </header>
 
@@ -59,50 +89,50 @@
       <img class="hero-left" src="images/hero-izquierda.png" alt="">
       <img class="hero-right" src="images/hero-derecha.png" alt="">
       <div class="hero-content">
-        <h1>Acompáñalo, incluso en los momentos difíciles</h1>
-        <p class="hero-sub">Nubi guía a cuidadores y ayuda a niños a calmarse y comunicarse.</p>
-        <a class="btn btn-dark btn-lg" href="#planes">Comenzar ahora</a>
+        <h1 data-i18n="k012">Be there, even in the hardest moments</h1>
+        <p class="hero-sub" data-i18n="k013">Nubi guides caregivers and helps children calm down and communicate.</p>
+        <a class="btn btn-dark btn-lg" href="#planes" data-app-route="signup" data-i18n="k014">Get started now</a>
       </div>
     </section>
 
     <!-- EL PROBLEMA -->
     <section class="problem">
       <div class="problem-text">
-        <span class="eyebrow">EL PROBLEMA</span>
-        <h2>Cuando llega una crisis, cada segundo de incertidumbre pesa</h2>
-        <p>Las herramientas actuales se enfocan en el seguimiento clínico a largo plazo, no en acompañar el "durante" del episodio de desregulación.</p>
+        <span class="eyebrow" data-i18n="k015">THE PROBLEM</span>
+        <h2 data-i18n="k016">When a crisis hits, every second of uncertainty weighs heavy</h2>
+        <p data-i18n="k017">Current tools focus on long-term clinical follow-up, not on supporting the "during" of a dysregulation episode.</p>
       </div>
       <div class="problem-art">
-        <img src="images/problema.png" alt="Ilustración de una persona abrumada por pensamientos">
+        <img src="images/problema.png" alt="Illustration of a person overwhelmed by thoughts" data-i18n-alt="k018">
       </div>
     </section>
 
     <!-- CÓMO FUNCIONA -->
     <section class="how">
       <div class="how-head">
-        <span class="pill-label">Cómo funciona</span>
-        <h2>De la creación del perfil a la calma, en<br>cuatro pasos</h2>
+        <span class="pill-label" data-i18n="k019">How it works</span>
+        <h2 data-i18n="k020" data-i18n-html>From creating a profile to calm, in<br>four steps</h2>
       </div>
       <div class="steps">
         <div class="step">
           <span class="step-num">1</span>
-          <h3>Crea el perfil</h3>
-          <p>Registra al niño o adolescente y sus sensibilidades sensoriales.</p>
+          <h3 data-i18n="k021">Create the profile</h3>
+          <p data-i18n="k022">Register the child or teenager and their sensory sensitivities.</p>
         </div>
         <div class="step">
           <span class="step-num">2</span>
-          <h3>Personaliza Nubi</h3>
-          <p>Define estímulos favoritos, pictogramas y guías de actuación.</p>
+          <h3 data-i18n="k023">Personalize Nubi</h3>
+          <p data-i18n="k024">Set favorite stimuli, pictograms and action guides.</p>
         </div>
         <div class="step">
           <span class="step-num">3</span>
-          <h3>Usa Nubi en el momento</h3>
-          <p>Activa el Modo SOS o la autorregulación cuando surge la crisis.</p>
+          <h3 data-i18n="k025">Use Nubi in the moment</h3>
+          <p data-i18n="k026">Start SOS Mode or self-regulation when a crisis arises.</p>
         </div>
         <div class="step">
           <span class="step-num">4</span>
-          <h3>Da seguimiento</h3>
-          <p>Revisa el historial y recibe recomendaciones personalizadas.</p>
+          <h3 data-i18n="k027">Follow up</h3>
+          <p data-i18n="k028">Review the history and get personalized recommendations.</p>
         </div>
       </div>
     </section>
@@ -113,27 +143,27 @@
       <!-- Perfil -->
       <section class="card" id="perfil">
         <div class="card-text">
-          <h2 class="xl">Un perfil que se adapta a cada niño o adolescente</h2>
-          <p>Registra el diagnóstico, las sensibilidades sensoriales y las preferencias del usuario para que Nubi personalice el Modo SOS, los estímulos de autorregulación y las recomendaciones desde el primer uso.</p>
-          <a class="btn btn-dark btn-md" href="#autocuidado">Conocer la personalización</a>
+          <h2 class="xl" data-i18n="k029">A profile that adapts to every child or teenager</h2>
+          <p data-i18n="k030">Record the diagnosis, sensory sensitivities and preferences of the user so Nubi personalizes SOS Mode, self-regulation stimuli and recommendations from the very first use.</p>
+          <a class="btn btn-dark btn-md" href="#autocuidado" data-i18n="k031">Explore personalization</a>
         </div>
         <div class="card-visual profile-card">
           <div class="profile-user">
             <div class="avatar">D</div>
-            <strong>Diana, 14 años</strong>
+            <strong data-i18n="k032">Diana, 14 years old</strong>
           </div>
           <div class="chips">
-            <span class="chip">TEA</span>
-            <span class="chip">Sensibilidad auditiva alta</span>
-            <span class="chip">Prefiere estímulos visuales</span>
+            <span class="chip" data-i18n="k033">ASD</span>
+            <span class="chip" data-i18n="k034">High auditory sensitivity</span>
+            <span class="chip" data-i18n="k035">Prefers visual stimuli</span>
           </div>
           <div class="info-row">
             <span class="info-icon"><svg class="ic"><use href="#i-users"/></svg></span>
-            <div><strong>2 cuidadores vinculados</strong><span>Mateo (padre) · Ingrid (madre)</span></div>
+            <div><strong data-i18n="k036">2 linked caregivers</strong><span data-i18n="k037">Mateo (father) · Ingrid (mother)</span></div>
           </div>
           <div class="info-row">
             <span class="info-icon"><svg class="ic"><use href="#i-ok"/></svg></span>
-            <div><strong>Perfil completo</strong><span>Listo para personalizar el Modo SOS</span></div>
+            <div><strong data-i18n="k038">Complete profile</strong><span data-i18n="k039">Ready to personalize SOS Mode</span></div>
           </div>
         </div>
       </section>
@@ -142,46 +172,46 @@
       <section class="card" id="sos" style="padding:94px 65px;gap:40px">
         <div class="card-text" style="gap:32px">
           <div style="display:flex;flex-direction:column;gap:12px">
-            <h2>Modo SOS: guías paso a paso ante<br>una crisis</h2>
-            <p>Con un solo toque, el cuidador accede a una guía de actuación secuencial y personalizada según el perfil del usuario, evitando la sobrecarga de decidir qué hacer en medio de la tensión.</p>
+            <h2 data-i18n="k040" data-i18n-html>SOS Mode: step-by-step guides during<br>a crisis</h2>
+            <p data-i18n="k041">With a single tap, the caregiver gets a sequential action guide personalized to the user's profile, avoiding the overload of deciding what to do in the middle of the tension.</p>
           </div>
-          <a class="btn btn-dark btn-md" href="#planes" style="margin:0">Crear cuenta y activarlo</a>
+          <a class="btn btn-dark btn-md" href="#planes" data-app-route="signup" style="margin:0" data-i18n="k042">Create an account and activate it</a>
         </div>
         <div class="sos-steps">
-          <div class="sos-step"><span class="sos-num">1</span><div><strong>Reduce estímulos cercanos</strong><span>Baja el volumen y la intensidad de luces si es posible.</span></div></div>
-          <div class="sos-step"><span class="sos-num">2</span><div><strong>Ofrece el estímulo favorito</strong><span>Activa el sonido o la imagen de calma preferida del usuario.</span></div></div>
-          <div class="sos-step"><span class="sos-num">3</span><div><strong>Acompaña sin exigir palabras</strong><span>Permite que use el tablero de pictogramas si lo necesita.</span></div></div>
-          <div class="sos-step"><span class="sos-num">4</span><div><strong>Cierra el episodio</strong><span>Registra la duración y agrega notas para el historial.</span></div></div>
+          <div class="sos-step"><span class="sos-num">1</span><div><strong data-i18n="k043">Reduce nearby stimuli</strong><span data-i18n="k044">Lower the volume and light intensity if possible.</span></div></div>
+          <div class="sos-step"><span class="sos-num">2</span><div><strong data-i18n="k045">Offer the favorite stimulus</strong><span data-i18n="k046">Play the user's preferred calming sound or image.</span></div></div>
+          <div class="sos-step"><span class="sos-num">3</span><div><strong data-i18n="k047">Stay close without demanding words</strong><span data-i18n="k048">Let them use the pictogram board if they need it.</span></div></div>
+          <div class="sos-step"><span class="sos-num">4</span><div><strong data-i18n="k049">Close the episode</strong><span data-i18n="k050">Record the duration and add notes for the history.</span></div></div>
         </div>
       </section>
 
       <!-- Estímulos -->
       <section class="card" id="autocuidado" style="padding:86px 37px 86px 53px">
         <div class="card-text">
-          <h2>Estímulos personalizables para<br>recuperar la calma</h2>
-          <p>Estímulos visuales y auditivos, un modo de baja estimulación y un temporizador de calma sin números ansiosos, para que el usuario recupere el equilibrio a su propio ritmo.</p>
-          <a class="btn btn-dark btn-md" href="#planes">Explorar autorregulación</a>
+          <h2 data-i18n="k051" data-i18n-html>Customizable stimuli to<br>regain calm</h2>
+          <p data-i18n="k052">Visual and auditory stimuli, a low-stimulation mode and a calm timer without anxious numbers, so the user regains balance at their own pace.</p>
+          <a class="btn btn-dark btn-md" href="#planes" data-i18n="k053">Explore self-regulation</a>
         </div>
         <div class="mint-panel">
           <div class="tabs">
-            <span class="tab active">Visual</span>
-            <span class="tab">Auditivo</span>
-            <span class="tab">Favoritos</span>
+            <span class="tab active" data-i18n="k054">Visual</span>
+            <span class="tab" data-i18n="k055">Auditory</span>
+            <span class="tab" data-i18n="k056">Favorites</span>
           </div>
           <div class="white-row">
             <span class="info-icon" style="background:var(--mint-200)"><svg class="ic"><use href="#i-wave"/></svg></span>
-            <div><strong>Olas de calma</strong><span>Estímulo visual en reproducción</span></div>
+            <div><strong data-i18n="k057">Calm waves</strong><span data-i18n="k058">Visual stimulus playing</span></div>
             <svg class="wave" viewBox="0 0 150 36" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true">
               <path d="M2 18c9-14 18-14 27 0s18 14 27 0 18-14 27 0 18 14 27 0 18-14 27 0"/>
             </svg>
           </div>
           <div class="meter">
-            <div class="meter-head"><span>Intensidad</span><span>Media</span></div>
+            <div class="meter-head"><span data-i18n="k059">Intensity</span><span data-i18n="k060">Medium</span></div>
             <div class="meter-track"><div class="meter-fill"></div></div>
           </div>
           <div class="white-row">
             <span class="info-icon"><svg class="ic"><use href="#i-clock"/></svg></span>
-            <div><strong>Temporizador de calma</strong><span>Cuenta regresiva visual, sin números</span></div>
+            <div><strong data-i18n="k061">Calm timer</strong><span data-i18n="k062">Visual countdown, no numbers</span></div>
           </div>
         </div>
       </section>
@@ -189,80 +219,80 @@
       <!-- Pictogramas -->
       <section class="card" id="comunicacion" style="padding:61px 109px 61px 65px">
         <div class="card-text" style="gap:7px">
-          <h2 class="xl" style="font-size:40px;margin-bottom:7px;max-width:515px">Un tablero de pictogramas para<br>expresar necesidades</h2>
-          <p style="margin-bottom:24px">El usuario selecciona un pictograma y Nubi reproduce el audio asociado y notifica al cuidador vinculado de forma inmediata, sin depender del habla en un momento de bloqueo.</p>
-          <a class="btn btn-dark btn-md" href="#faq" style="margin:0;border-radius:100px;padding:15px 39px">Preguntas frecuentes del tablero CAA</a>
+          <h2 class="xl" style="font-size:40px;margin-bottom:7px;max-width:515px" data-i18n="k063" data-i18n-html>A pictogram board to<br>express needs</h2>
+          <p style="margin-bottom:24px" data-i18n="k064">The user selects a pictogram and Nubi plays the associated audio and immediately notifies the linked caregiver, without relying on speech in a moment of shutdown.</p>
+          <a class="btn btn-dark btn-md" href="#faq" style="margin:0;border-radius:100px;padding:15px 39px" data-i18n="k065">AAC board FAQs</a>
         </div>
         <div class="picto-grid">
-          <div class="picto"><svg class="ic"><use href="#i-drop"/></svg>Agua</div>
-          <div class="picto"><svg class="ic"><use href="#i-mute"/></svg>Silencio</div>
-          <div class="picto"><svg class="ic"><use href="#i-ok"/></svg>Estoy bien</div>
-          <div class="picto"><svg class="ic"><use href="#i-help"/></svg>Ayuda</div>
-          <div class="picto"><svg class="ic"><use href="#i-moon"/></svg>Descanso</div>
-          <div class="picto"><svg class="ic"><use href="#i-loud"/></svg>Ruido fuerte</div>
+          <div class="picto"><svg class="ic"><use href="#i-drop"/></svg><span data-i18n="k066">Water</span></div>
+          <div class="picto"><svg class="ic"><use href="#i-mute"/></svg><span data-i18n="k067">Silence</span></div>
+          <div class="picto"><svg class="ic"><use href="#i-ok"/></svg><span data-i18n="k068">I'm OK</span></div>
+          <div class="picto"><svg class="ic"><use href="#i-help"/></svg><span data-i18n="k069">Help</span></div>
+          <div class="picto"><svg class="ic"><use href="#i-moon"/></svg><span data-i18n="k070">Rest</span></div>
+          <div class="picto"><svg class="ic"><use href="#i-loud"/></svg><span data-i18n="k071">Loud noise</span></div>
         </div>
       </section>
 
       <!-- Seguimiento -->
       <section class="card follow" id="apoyo">
         <div class="follow-text">
-          <h2>Seguimiento y recomendaciones<br>para cuidadores</h2>
-          <p>Nubi da seguimiento a los episodios registrados, genera recomendaciones personalizadas según el perfil del usuario y mantiene al cuidador al tanto del estado actual desde un panel de inicio.</p>
-          <a class="btn btn-dark btn-lg" href="#planes">Ver planes Disponibles</a>
+          <h2 data-i18n="k072" data-i18n-html>Follow-up and recommendations<br>for caregivers</h2>
+          <p data-i18n="k073">Nubi tracks recorded episodes, generates recommendations personalized to the user's profile and keeps the caregiver up to date on the current status from a home dashboard.</p>
+          <a class="btn btn-dark btn-lg" href="#planes" data-i18n="k074">See available plans</a>
         </div>
-        <img src="images/seguimiento.png" alt="Ilustración de formas de colores con expresiones">
+        <img src="images/seguimiento.png" alt="Illustration of colorful shapes with facial expressions" data-i18n-alt="k075">
       </section>
     </div>
 
     <!-- PLANES -->
     <section class="section container" id="planes" style="margin-top:106px;padding-inline:101px">
       <div class="plans-head">
-        <span class="eyebrow">Planes</span>
-        <h2>Un plan para cada familia e institución</h2>
-        <p>Nubi combina un esquema freemium para familias con planes de suscripción para instituciones educativas y centros de terapia.</p>
+        <span class="eyebrow" data-i18n="k007">Plans</span>
+        <h2 data-i18n="k076">A plan for every family and institution</h2>
+        <p data-i18n="k077">Nubi combines a freemium scheme for families with subscription plans for schools and therapy centers.</p>
       </div>
       <div class="plans">
         <div class="plan-col side">
           <div class="plan">
             <span class="plan-name">Nubi Free</span>
-            <span class="plan-price">Gratis</span>
-            <span class="plan-desc">Para familias que están empezando a usar Nubi.</span>
+            <span class="plan-price" data-i18n="k078">Free</span>
+            <span class="plan-desc" data-i18n="k079">For families just starting with Nubi.</span>
             <ul>
-              <li>1 perfil de usuario neurodivergente</li>
-              <li>Modo SOS con guía estándar</li>
-              <li>Estímulos de autorregulación básicos</li>
-              <li>Tablero CAA con pictogramas base</li>
+              <li data-i18n="k080">1 neurodivergent user profile</li>
+              <li data-i18n="k081">SOS Mode with standard guide</li>
+              <li data-i18n="k082">Basic self-regulation stimuli</li>
+              <li data-i18n="k083">AAC board with base pictograms</li>
             </ul>
-            <a class="btn btn-yellow" href="#contacto">Comenzar gratis</a>
+            <a class="btn btn-yellow" href="#contacto" data-app-route="signup" data-i18n="k011">Get started free</a>
           </div>
         </div>
         <div class="plan-col premium">
-          <span class="plan-badge">Más elegido</span>
+          <span class="plan-badge" data-i18n="k084">Most popular</span>
           <div class="plan" style="margin-top:4px">
             <span class="plan-name">Nubi Premium</span>
-            <span class="plan-price">S/ 29.90 / mes</span>
-            <span class="plan-desc">Para familias que buscan personalización completa.</span>
+            <span class="plan-price" data-i18n="k085">S/ 29.90 / month</span>
+            <span class="plan-desc" data-i18n="k086">For families looking for full personalization.</span>
             <ul>
-              <li>Perfiles ilimitados y varios cuidadores</li>
-              <li>Modo SOS personalizado por sensibilidades</li>
-              <li>Pictogramas y estímulos personalizados</li>
-              <li>Historial, recomendaciones y exportación de datos</li>
+              <li data-i18n="k087">Unlimited profiles and multiple caregivers</li>
+              <li data-i18n="k088">SOS Mode personalized by sensitivities</li>
+              <li data-i18n="k089">Custom pictograms and stimuli</li>
+              <li data-i18n="k090">History, recommendations and data export</li>
             </ul>
-            <a class="btn btn-mint" href="#contacto">Elegir Premium</a>
+            <a class="btn btn-mint" href="#contacto" data-app-route="signup" data-i18n="k091">Choose Premium</a>
           </div>
         </div>
         <div class="plan-col side">
           <div class="plan">
-            <span class="plan-name">Nubi Instituciones</span>
-            <span class="plan-price">A medida</span>
-            <span class="plan-desc">Para colegios y centros de terapia (B2B).</span>
+            <span class="plan-name" data-i18n="k092">Nubi Institutions</span>
+            <span class="plan-price" data-i18n="k093">Custom</span>
+            <span class="plan-desc" data-i18n="k094">For schools and therapy centers (B2B).</span>
             <ul>
-              <li>Gestión de múltiples usuarios y educadores</li>
-              <li>Panel de seguimiento institucional</li>
-              <li>Capacitación y soporte dedicado</li>
-              <li>Convenios con colegios y centros de terapia</li>
+              <li data-i18n="k095">Management of multiple users and educators</li>
+              <li data-i18n="k096">Institutional monitoring dashboard</li>
+              <li data-i18n="k097">Training and dedicated support</li>
+              <li data-i18n="k098">Agreements with schools and therapy centers</li>
             </ul>
-            <a class="btn btn-pink" href="#contacto">Contactar al equipo</a>
+            <a class="btn btn-pink" href="#contacto" data-i18n="k099">Contact the team</a>
           </div>
         </div>
       </div>
@@ -271,29 +301,29 @@
     <!-- TESTIMONIOS -->
     <section class="section container" style="padding-inline:157px 83px">
       <div class="testimonials-head">
-        <span class="pill-label">Testimonios</span>
-        <h2>Familias que ya acompañan diferente<br>con Nubi</h2>
+        <span class="pill-label" data-i18n="k100">Testimonials</span>
+        <h2 data-i18n="k101" data-i18n-html>Families who already<br>support differently with Nubi</h2>
       </div>
       <div class="testimonials">
         <figure class="quote peach" style="margin:0">
-          <p>"Antes de Nubi no sabía qué hacer en el momento exacto de la crisis. Ahora tengo una guía clara y eso me da seguridad a mí y calma a mi hija."</p>
+          <p data-i18n="k102">"Before Nubi I didn't know what to do at the exact moment of the crisis. Now I have a clear guide, and that gives me confidence and my daughter calm."</p>
           <figcaption class="quote-by">
             <span class="quote-avatar">M</span>
-            <div><strong>Mateo</strong><span>Cuidador primario</span></div>
+            <div><strong>Mateo</strong><span data-i18n="k103">Primary caregiver</span></div>
           </figcaption>
         </figure>
         <figure class="quote dark" style="margin:0">
-          <p>"El tablero de pictogramas cambió la forma en que mi hijo me cuenta lo que necesita cuando está abrumado. Ya no tenemos que adivinar."</p>
+          <p data-i18n="k104">"The pictogram board changed the way my son tells me what he needs when he is overwhelmed. We no longer have to guess."</p>
           <figcaption class="quote-by">
             <span class="quote-avatar">I</span>
-            <div><strong>Ingrid</strong><span>Madre de un adolescente con TDAH</span></div>
+            <div><strong>Ingrid</strong><span data-i18n="k105">Mother of a teenager with ADHD</span></div>
           </figcaption>
         </figure>
         <figure class="quote white" style="margin:0">
-          <p>"Nos ayudó a entender las sensibilidades de nuestro hijo mejor que cualquier otra herramienta que probamos antes."</p>
+          <p data-i18n="k106">"It helped us understand our son's sensitivities better than any other tool we tried before."</p>
           <figcaption class="quote-by">
             <span class="quote-avatar">J</span>
-            <div><strong>Johan</strong><span>Padre de un niño con TEA</span></div>
+            <div><strong>Johan</strong><span data-i18n="k107">Father of a child with ASD</span></div>
           </figcaption>
         </figure>
       </div>
@@ -307,14 +337,26 @@
       </div>
       <div class="faq-main">
         <div class="faq-head">
-          <span class="eyebrow">Preguntas frecuentes</span>
-          <h2>Resolvemos tus dudas sobre Nubi</h2>
+          <span class="eyebrow" data-i18n="k108">Frequently asked questions</span>
+          <h2 data-i18n="k109">We answer your questions about Nubi</h2>
         </div>
         <div class="faq-list">
-          <button class="faq-item" type="button">¿Nubi reemplaza la atención médica o psicológica?<span class="plus"></span></button>
-          <button class="faq-item" type="button">¿Nubi funciona sin conexión a internet?<span class="plus"></span></button>
-          <button class="faq-item" type="button">¿Cuántos cuidadores pueden acompañar a un mismo usuario?<span class="plus"></span></button>
-          <button class="faq-item" type="button">¿Qué pasa si selecciono un pictograma del tablero CAA y el cuidador no está disponible?<span class="plus"></span></button>
+          <details class="faq-entry">
+            <summary class="faq-item"><span data-i18n="k110">Does Nubi replace medical or psychological care?</span><span class="plus" aria-hidden="true"></span></summary>
+            <p class="faq-answer" data-i18n="k111">No. Nubi is operational support for the moment of a crisis; it does not replace diagnosis or care from health professionals.</p>
+          </details>
+          <details class="faq-entry">
+            <summary class="faq-item"><span data-i18n="k112">Does Nubi work without an internet connection?</span><span class="plus" aria-hidden="true"></span></summary>
+            <p class="faq-answer" data-i18n="k113">Nubi is designed so that the SOS Mode guide and downloaded calming resources are available offline, because many families have limited mobile data away from home.</p>
+          </details>
+          <details class="faq-entry">
+            <summary class="faq-item"><span data-i18n="k114">How many caregivers can support the same user?</span><span class="plus" aria-hidden="true"></span></summary>
+            <p class="faq-answer" data-i18n="k115">A profile can have several linked caregivers. The maximum number depends on the chosen plan.</p>
+          </details>
+          <details class="faq-entry">
+            <summary class="faq-item"><span data-i18n="k116">What happens if I select a pictogram on the AAC board and the caregiver is not available?</span><span class="plus" aria-hidden="true"></span></summary>
+            <p class="faq-answer" data-i18n="k117">Nubi plays the pictogram's audio on the device and saves the message to notify the caregiver as soon as they are available.</p>
+          </details>
         </div>
       </div>
     </section>
@@ -322,26 +364,26 @@
     <!-- BENEFICIOS -->
     <section class="section container" style="margin-top:110px">
       <div class="benefits-head">
-        <span class="eyebrow">Beneficios</span>
-        <h2>Beneficios para ambos</h2>
-        <p>Herramientas que acompañan tanto al cuidador como al usuario neurodivergente.</p>
+        <span class="eyebrow" data-i18n="k118">Benefits</span>
+        <h2 data-i18n="k119">Benefits for both</h2>
+        <p data-i18n="k120">Tools that support both the caregiver and the neurodivergent user.</p>
       </div>
       <div class="benefits">
         <article class="benefit peach">
-          <h3>Para el cuidador</h3>
+          <h3 data-i18n="k121">For the caregiver</h3>
           <ul>
-            <li>Actúa con mayor rapidez y seguridad durante una crisis.</li>
-            <li>Brinda un acompañamiento adaptado a las necesidades del usuario.</li>
-            <li>Aprende de episodios anteriores para mejorar futuras intervenciones.</li>
+            <li data-i18n="k122">Act faster and with more confidence during a crisis.</li>
+            <li data-i18n="k123">Provide support adapted to the user's needs.</li>
+            <li data-i18n="k124">Learn from past episodes to improve future interventions.</li>
           </ul>
           <img src="images/corazones-cuidador.png" alt="">
         </article>
         <article class="benefit white">
-          <h3>Para el usuario neurodivergente</h3>
+          <h3 data-i18n="k125">For the neurodivergent user</h3>
           <ul>
-            <li>Recupera la calma a su propio ritmo con estímulos que le gustan.</li>
-            <li>Expresa lo que necesita sin depender del habla.</li>
-            <li>Cuenta con un entorno predecible y adaptado a sus sensibilidades.</li>
+            <li data-i18n="k126">Regain calm at their own pace with stimuli they like.</li>
+            <li data-i18n="k127">Express what they need without relying on speech.</li>
+            <li data-i18n="k128">Have a predictable environment adapted to their sensitivities.</li>
           </ul>
           <img src="images/corazones-usuario.png" alt="">
         </article>
@@ -351,78 +393,78 @@
     <!-- EQUIPO -->
     <section class="section container" id="equipo" style="margin-top:130px">
       <div class="team-head">
-        <span class="pill-label">Conoce al equipo</span>
-        <h2>Las personas<br>detrás de Nubi</h2>
-        <p>Somos Macally, un equipo de estudiantes de Ingeniería de Software de la UPC construyendo Nubi junto a cuidadores y educadores.</p>
+        <span class="pill-label" data-i18n="k129">Meet the team</span>
+        <h2 data-i18n="k130" data-i18n-html>The people<br>behind Nubi</h2>
+        <p data-i18n="k131">We are Macally, a team of Software Engineering students at UPC building Nubi together with caregivers and educators.</p>
       </div>
       <div class="team">
         <article class="member">
           <img src="images/equipo-leonardo.jpeg" alt="Leonardo Lopez Torres">
           <h3>Leonardo Lopez<br>Torres</h3>
-          <p>Aporta ayuda constante al equipo y una comunicación ágil en cada entrega del proyecto.</p>
+          <p data-i18n="k132">Brings constant support to the team and agile communication in every project deliverable.</p>
         </article>
         <article class="member">
           <img src="images/equipo-sofia.png" alt="Sofia Diaz Yurivilca" style="object-position:center 25%">
           <h3>Sofia Diaz Yurivilca</h3>
-          <p>Enfocada en frontend, cuidando que cada pantalla de Nubi sea clara y fácil de usar.</p>
+          <p data-i18n="k133">Focused on frontend, making sure every Nubi screen is clear and easy to use.</p>
         </article>
         <article class="member">
           <img src="images/equipo-edgard.jpeg" alt="Edgard Diaz Caruzo" style="object-position:center 38%">
           <h3>Edgard Diaz Caruzo</h3>
-          <p>Responsable y puntual, siempre dispuesto a apoyar en cualquier frente del proyecto.</p>
+          <p data-i18n="k134">Responsible and punctual, always ready to help on any front of the project.</p>
         </article>
         <article class="member">
           <img src="images/equipo-yngrid.jpg" alt="Yngrid Ruiz Villegas" style="object-position:center 30%">
           <h3>Yngrid Ruiz Villegas</h3>
-          <p>Comprometida con el desarrollo del proyecto y con mantener una comunicación fluida en el equipo.</p>
+          <p data-i18n="k135">Committed to the project's development and to keeping communication flowing within the team.</p>
         </article>
         <article class="member">
           <img src="images/equipo-joan.png" alt="Joan Payano Puchuri">
           <h3>Joan Payano Puchuri</h3>
-          <p>Con base en C++, Python, JavaScript, HTML y CSS, aporta soluciones y se adapta a cada reto.</p>
+          <p data-i18n="k136">With a background in C++, Python, JavaScript, HTML and CSS, brings solutions and adapts to every challenge.</p>
         </article>
       </div>
     </section>
 
     <!-- CTA -->
     <section class="section cta" style="margin-top:130px">
-      <h2>Empieza a acompañar mejor, desde hoy</h2>
-      <p>Crea el perfil de tu hijo o hija neurodivergente en minutos y ten el Modo SOS listo antes de la próxima crisis.</p>
+      <h2 data-i18n="k137">Start supporting better, starting today</h2>
+      <p data-i18n="k138">Create your neurodivergent child's profile in minutes and have SOS Mode ready before the next crisis.</p>
       <div class="cta-actions">
-        <a class="btn btn-mint btn-cta" href="#planes">Comenzar gratis</a>
-        <a class="btn btn-cta outline" href="#faq">Resolver mis dudas</a>
+        <a class="btn btn-mint btn-cta" href="#planes" data-app-route="signup" data-i18n="k011">Get started free</a>
+        <a class="btn btn-cta outline" href="#faq" data-i18n="k139">Get my questions answered</a>
       </div>
     </section>
 
     <!-- CONTACTO -->
     <section class="section container" id="contacto" style="margin-top:130px;padding-inline:100px">
       <div class="contact-head">
-        <span class="eyebrow">CONTACTO</span>
-        <h2>Estamos aquí para acompañarte</h2>
-        <p>Ya sea que tengas dudas, necesites ayuda para empezar o quieras saber más, escríbenos cuando quieras.</p>
+        <span class="eyebrow" data-i18n="k140">CONTACT</span>
+        <h2 data-i18n="k141">We are here to support you</h2>
+        <p data-i18n="k142">Whether you have questions, need help getting started or want to know more, write to us anytime.</p>
       </div>
       <div class="contact-card">
         <div class="contact-info">
-          <h3>Datos de contacto:</h3>
-          <p>Correo: hola@nubi.app</p>
-          <p>Teléfono: +1 (123) 456-7890</p>
-          <p style="margin-top:15px">Dirección: 123 Wellness Way, Calm City, CA 90210</p>
+          <h3 data-i18n="k143">Contact details:</h3>
+          <p data-i18n="k144">Email: hola@nubi.app</p>
+          <p data-i18n="k145">Phone: +1 (123) 456-7890</p>
+          <p style="margin-top:15px" data-i18n="k146">Address: 123 Wellness Way, Calm City, CA 90210</p>
           <div class="socials">
             <a href="#" aria-label="Instagram"><svg class="ic"><use href="#i-insta"/></svg></a>
             <a href="#" aria-label="Facebook"><svg class="ic"><use href="#i-fb"/></svg></a>
             <a href="#" aria-label="LinkedIn"><svg class="ic"><use href="#i-in"/></svg></a>
             <a href="#" aria-label="X"><svg class="ic"><use href="#i-x"/></svg></a>
           </div>
-          <p class="response">Nosotros nos contactaremos en 12 horas</p>
+          <p class="response" data-i18n="k147">We will get back to you within 12 hours</p>
         </div>
         <div class="contact-form-wrap">
-          <h3>Mandanos un mensaje</h3>
+          <h3 data-i18n="k148">Send us a message</h3>
           <form class="contact-form">
-            <label for="correo">Correo Electronico</label>
-            <input id="correo" type="email" name="correo" autocomplete="email">
-            <label for="mensaje">Mensaje</label>
-            <textarea id="mensaje" name="mensaje"></textarea>
-            <button class="btn btn-dark" type="submit">Mandar mensaje</button>
+            <label for="correo" data-i18n="k149">Email</label>
+            <input id="correo" type="email" name="correo" autocomplete="email" required>
+            <label for="mensaje" data-i18n="k150">Message</label>
+            <textarea id="mensaje" name="mensaje" required></textarea>
+            <button class="btn btn-dark" type="submit" data-i18n="k151">Send message</button>
           </form>
         </div>
       </div>
@@ -438,52 +480,54 @@
           <img src="images/logo-blanco.png" alt="">
           <h3>Nubi</h3>
         </div>
-        <p>Un producto de Macally para acompañar a niños, adolescentes neurodivergentes y a sus cuidadores durante episodios de desregulación.</p>
+        <p data-i18n="k152">A Macally product to support neurodivergent children and teenagers and their caregivers during dysregulation episodes.</p>
         <div class="footer-social">
           <a href="#" aria-label="Instagram"><svg class="ic"><use href="#i-insta"/></svg></a>
           <a href="#" aria-label="Facebook"><svg class="ic"><use href="#i-fb"/></svg></a>
           <a href="#" aria-label="LinkedIn"><svg class="ic"><use href="#i-in"/></svg></a>
         </div>
-        <span class="copyright">© 2026 Nubi · Macally. Todos los derechos reservados.</span>
+        <span class="copyright" data-i18n="k153">© 2026 Nubi · Macally. All rights reserved.</span>
       </div>
 
       <div class="footer-col">
-        <h4>Producto</h4>
+        <h4 data-i18n="k154">Product</h4>
         <ul>
-          <li><a href="#perfil">Perfil y Personalización</a></li>
-          <li><a href="#sos">Modo SOS</a></li>
-          <li><a href="#autocuidado">Autorregulación</a></li>
-          <li><a href="#comunicacion">Comunicación CAA</a></li>
-          <li><a href="#apoyo">Red de Apoyo</a></li>
+          <li><a href="#perfil" data-i18n="k155">Profile & Personalization</a></li>
+          <li><a href="#sos" data-i18n="k005">SOS Mode</a></li>
+          <li><a href="#autocuidado" data-i18n="k156">Self-regulation</a></li>
+          <li><a href="#comunicacion" data-i18n="k157">AAC Communication</a></li>
+          <li><a href="#apoyo" data-i18n="k158">Support Network</a></li>
         </ul>
       </div>
 
       <div class="footer-two">
         <div class="footer-col">
-          <h4>Compañía</h4>
+          <h4 data-i18n="k159">Company</h4>
           <ul>
-            <li><a href="#equipo">Conoce al equipo</a></li>
-            <li><a href="#planes">Planes</a></li>
-            <li><a href="#faq">Preguntas frecuentes</a></li>
-            <li><a href="#contacto">Contacto</a></li>
+            <li><a href="#equipo" data-i18n="k129">Meet the team</a></li>
+            <li><a href="#planes" data-i18n="k007">Plans</a></li>
+            <li><a href="#faq" data-i18n="k108">Frequently asked questions</a></li>
+            <li><a href="#contacto" data-i18n="k160">Contact</a></li>
           </ul>
         </div>
         <div class="footer-col">
-          <h4>Legal</h4>
+          <h4 data-i18n="k161">Legal</h4>
           <ul>
-            <li><a href="#">Términos de uso</a></li>
-            <li><a href="#">Política de privacidad</a></li>
-            <li><a href="#">Aviso de accesibilidad</a></li>
+            <li><a href="terms.html#terms" data-i18n="k162">Terms of use</a></li>
+            <li><a href="terms.html#privacy" data-i18n="k163">Privacy policy</a></li>
+            <li><a href="terms.html#accessibility" data-i18n="k164">Accessibility statement</a></li>
           </ul>
         </div>
       </div>
 
-      <p class="footer-made">Hecho con cuidado para familias neurodivergentes.</p>
+      <p class="footer-made" data-i18n="k165">Made with care for neurodivergent families.</p>
     </div>
     <img class="footer-art" src="images/footer-arcoiris.png" alt="">
   </footer>
 
 </div>
 <script src="app.js"></script>
+<script src="i18n.js"></script>
+<script src="main.js"></script>
 </body>
 </html>
