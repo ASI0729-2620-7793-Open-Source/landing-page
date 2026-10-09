@@ -283,11 +283,7 @@ button { font-family: inherit; cursor: pointer; }
 .member h3 { font-size: 16px; font-weight: 700; line-height: 1.3; }
 .member p { font-size: 14px; line-height: 1.45; }
 
-<<<<<<< HEAD
 /* ---------- Video About the Team and About the product ---------- */
-=======
-/* ---------- Video About the Team ---------- */
->>>>>>> 9e54f9547792bad2716cef91fbe8db49b86b05c0
 .team-video-box {
   margin-top: 56px;
   background: #fff;
@@ -318,7 +314,6 @@ button { font-family: inherit; cursor: pointer; }
   line-height: 1.5;
   color: #4A5568;
 }
-<<<<<<< HEAD
 .team-video-head .video-subtitle {
   font-size: 20px;
   font-weight: 800;
@@ -327,9 +322,6 @@ button { font-family: inherit; cursor: pointer; }
 }
 .team-video-wrapper,
 .video-frame {
-=======
-.team-video-wrapper {
->>>>>>> 9e54f9547792bad2716cef91fbe8db49b86b05c0
   width: 100%;
   max-width: 860px;
   aspect-ratio: 16 / 9;
@@ -348,12 +340,8 @@ button { font-family: inherit; cursor: pointer; }
   display: block;
   border-radius: 20px;
 }
-<<<<<<< HEAD
 .team-video-wrapper p,
 .video-frame p {
-=======
-.team-video-wrapper p {
->>>>>>> 9e54f9547792bad2716cef91fbe8db49b86b05c0
   color: #fff;
   padding: 16px;
   font-size: 14px;
