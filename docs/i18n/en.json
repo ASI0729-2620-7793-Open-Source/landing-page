@@ -175,9 +175,12 @@
   "k171": "About the team video",
   "k172": "Watch our presentation video to learn more about the team behind Nubi.",
   "k173": "Your browser does not support HTML5 video.",
+<<<<<<< HEAD
   "k174": "About the product",
   "k175": "See Nubi in action",
   "k176": "A short walkthrough of how Nubi supports caregivers and neurodivergent users during a crisis.",
+=======
+>>>>>>> 9e54f9547792bad2716cef91fbe8db49b86b05c0
   "terms.pageTitle": "Terms of Use · Nubi",
   "terms.back": "Back to home",
   "terms.h1": "Terms of use, privacy and accessibility",
