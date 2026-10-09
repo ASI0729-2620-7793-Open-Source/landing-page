@@ -67,13 +67,13 @@ button { font-family: inherit; cursor: pointer; }
   padding-top: 30px; padding-inline: 87px 60px;
 }
 .nav-links { display: flex; align-items: center; gap: 24px; font-size: 14px; }
-.nav-links a { padding: 4px 8px; border-radius: 4px; }
+.nav-links a { padding: 4px 8px; border-radius: 4px; white-space: nowrap; }
 .nav-links a:hover { color: var(--green); }
 .nav-right { justify-content: flex-end; gap: 22px; }
 .nav-logo img { width: 105px; height: 131px; object-fit: fill; }
-.nav-actions { display: flex; align-items: center; gap: 16px; margin-left: 10px; }
-.nav-actions .login { font-size: 16px; font-weight: 700; padding: 12px 8px; }
-.nav-actions .btn { padding: 9px 16px; font-size: 14px; }
+.nav-actions { display: flex; align-items: center; gap: 16px; margin-left: 10px; flex-shrink: 0; }
+.nav-actions .login { font-size: 16px; font-weight: 700; padding: 12px 8px; white-space: nowrap; }
+.nav-actions .btn { padding: 9px 16px; font-size: 14px; white-space: nowrap; }
 
 /* ---------- Hero ---------- */
 .hero {
@@ -283,6 +283,62 @@ button { font-family: inherit; cursor: pointer; }
 .member h3 { font-size: 16px; font-weight: 700; line-height: 1.3; }
 .member p { font-size: 14px; line-height: 1.45; }
 
+/* ---------- Video About the Team ---------- */
+.team-video-box {
+  margin-top: 56px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  padding: 44px 36px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.team-video-head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 24px;
+  max-width: 620px;
+}
+.team-video-head h3 {
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: -.01em;
+  color: var(--dark);
+}
+.team-video-head p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #4A5568;
+}
+.team-video-wrapper {
+  width: 100%;
+  max-width: 860px;
+  aspect-ratio: 16 / 9;
+  background: var(--dark);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 55, 62, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.team-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 20px;
+}
+.team-video-wrapper p {
+  color: #fff;
+  padding: 16px;
+  font-size: 14px;
+}
+
 /* ---------- CTA ---------- */
 .cta {
   background: var(--dark); border-radius: 20px; margin-inline: var(--gutter);
@@ -343,7 +399,7 @@ footer { position: relative; margin-top: 122px; background: var(--dark); color: 
 /* ---------- Accessibility & i18n additions ---------- */
 .skip-link { position: absolute; left: 16px; top: -64px; z-index: 100; background: var(--dark); color: #fff; padding: 12px 20px; border-radius: 999px; font-weight: 700; transition: top .15s ease; }
 .skip-link:focus { top: 12px; }
-.lang-switch { display: inline-flex; border: 1.5px solid var(--dark); border-radius: 999px; overflow: hidden; }
+.lang-switch { display: inline-flex; border: 1.5px solid var(--dark); border-radius: 999px; overflow: hidden; flex-shrink: 0; }
 .lang-btn { border: 0; background: transparent; color: var(--dark); font-size: 13px; font-weight: 700; padding: 8px 12px; min-width: 44px; min-height: 36px; }
 .lang-btn[aria-pressed="true"] { background: var(--dark); color: #fff; }
 .nav-toggle { display: none; width: 48px; height: 48px; border: 1.5px solid var(--dark); border-radius: 50%; background: transparent; align-items: center; justify-content: center; padding: 0; }
@@ -425,6 +481,9 @@ footer { position: relative; margin-top: 122px; background: var(--dark); color: 
   .benefit { padding: 40px 28px 260px; }
   .benefit img { right: 50%; transform: translateX(50%); }
   .team { grid-template-columns: 1fr 1fr; }
+  .team-video-box { padding: 28px 18px; border-radius: 24px; margin-top: 40px; }
+  .team-video-head h3 { font-size: 22px; }
+  .team-video-head p { font-size: 14px; }
   .cta h2 { font-size: 26px; }
   .contact-form .btn { padding: 15px 40px; }
   .footer-grid { grid-template-columns: 1fr; }
