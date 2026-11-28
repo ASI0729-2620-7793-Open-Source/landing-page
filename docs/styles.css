@@ -498,3 +498,15 @@ footer { position: relative; margin-top: 122px; background: var(--dark); color: 
   .footer-two { grid-template-columns: 1fr 1fr; gap: 24px; }
   .footer-art { display: none; }
 }
+/* Anula los márgenes laterales fijados en el HTML para escritorio, que en pantallas
+   angostas aplastan el contenido. */
+@media (max-width: 1180px) {
+  main .container[style*="padding-inline"] { padding-inline: var(--gutter) !important; }
+}
+/* Pantallas angostas: las figuras del hero quedan arriba y abajo, sin tapar el texto. */
+@media (max-width: 560px) {
+  .hero { height: auto; }
+  .hero-content { padding: 150px 20px 180px; }
+  .hero-left { width: 105px; height: 155px; }
+  .hero-right { width: 100px; height: 140px; }
+}

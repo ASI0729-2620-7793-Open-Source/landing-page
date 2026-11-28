@@ -5,10 +5,10 @@
 (() => {
   'use strict';
 
-  // Base URL of the deployed Nubi Web Application. While it is empty, the call-to-action
-  // buttons keep pointing to the sections of this page (plans / contact).
-  const WEB_APP_URL = '';
-  const APP_ROUTES = { signup: '/sign-up', login: '/login' };
+  // Base URL of the deployed Nubi Web Application. The call-to-action buttons of the landing
+  // page redirect to its sign-up and sign-in views.
+  const WEB_APP_URL = 'https://nubi-frontend-7793.web.app';
+  const APP_ROUTES = { signup: '/registro', login: '/ingresar' };
 
   if (WEB_APP_URL) {
     document.querySelectorAll('[data-app-route]').forEach((link) => {
