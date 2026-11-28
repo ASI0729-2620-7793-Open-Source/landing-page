@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://asi0729-2620-7793-open-source.github.io/landing-page/sitemap.xml

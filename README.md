@@ -11,14 +11,17 @@ Es un sitio estático: HTML, CSS y JavaScript sin frameworks ni paso de compilac
 
 ```
 docs/                       # Carpeta publicada en GitHub Pages
-├── index.html              # Página principal (HTML + CSS embebido)
+├── index.html              # Página principal
+├── styles.css              # Estilos de la página principal
 ├── terms.html              # Términos de uso, privacidad y accesibilidad
 ├── i18n.js                 # Selector de idioma (en / es-419)
 ├── main.js                 # Menú móvil y rutas de los call-to-action hacia la Web Application
+├── app.js                  # Manejo del formulario de contacto
 ├── i18n/
 │   ├── en.json             # Textos en inglés (idioma predeterminado)
 │   └── es.json             # Textos en español latinoamericano
-└── images/                 # Logos, ilustraciones y fotos del equipo
+├── images/                 # Logos, ilustraciones y fotos del equipo
+└── videos/                 # Video About the Team
 ```
 
 ## Cómo verla
@@ -56,7 +59,7 @@ Las secciones "El problema", "Cómo funciona", testimonios, beneficios y la llam
 
 ## Personalización
 
-**Colores.** Están definidos como variables CSS al inicio del `<style>`:
+**Colores.** Están definidos como variables CSS al inicio de `styles.css`:
 
 ```css
 --dark:  #00373E;   /* texto y fondos oscuros */
@@ -70,10 +73,9 @@ Las secciones "El problema", "Cómo funciona", testimonios, beneficios y la llam
 
 **Tipografía.** Bricolage Grotesque (Design System, sección 4.1.1 del informe), cargada desde Google Fonts. Sin conexión cae a la fuente del sistema (`system-ui`).
 
-**Textos y precios.** Se editan en `i18n/en.json` y `i18n/es.json` (y en `index.html` para el texto inglés inicial). El precio del plan Premium es `S/ 29.90 / month`.
+**Textos y precios.** Se editan en `i18n/en.json` y `i18n/es.json` (y en `index.html` para el texto inglés inicial). El plan Free cuesta `S/ 9.99 / month` y el Premium `S/ 29.90 / month`.
 
-**Equipo.** Cada integrante es un bloque `<article class="member">` dentro de `#equipo`. Para cambiar una foto, reemplaza el archivo en `images/` o ajusta el `src`. Joan Payano Puchuri usa un avatar con iniciales porque aún no tiene foto.
-
+**Equipo.** Cada integrante es un bloque `<article class="member">` dentro de `#equipo`. Para cambiar una foto, reemplaza el archivo en `images/` o ajusta el `src`.
 **Iconos.** Son SVG inline definidos una sola vez en el bloque `<svg>` al inicio del `<body>` y reutilizados con `<use href="#i-...">`.
 
 ## Diseño responsive
@@ -81,7 +83,7 @@ Las secciones "El problema", "Cómo funciona", testimonios, beneficios y la llam
 El diseño base está pensado para **1440 px** de ancho, con contenido máximo de 1440 px centrado. Puntos de quiebre:
 
 - **≤ 1180 px:** las tarjetas pasan a una columna, el equipo a 3 columnas y el menú de secciones se reemplaza por un botón de menú.
-- **≤ 820 px:** el equipo pasa a 2 columnas, los planes, testimonios y preguntas frecuentes se apilan, y "Log in" / "Get started free" pasan al menú desplegable.
+- **≤ 820 px:** el equipo pasa a 2 columnas, los planes, testimonios y preguntas frecuentes se apilan, y "Log in" / "Get started" pasan al menú desplegable.
 
 Se verificó la ausencia de desbordamiento horizontal a 375, 1100 y 1440 px.
 
@@ -91,8 +93,7 @@ Se verificó la ausencia de desbordamiento horizontal a 375, 1100 y 1440 px.
 - El formulario de contacto no envía datos: falta conectarlo a un backend o a un servicio de formularios.
 - Los datos de contacto (correo, teléfono y dirección) y los enlaces de redes sociales siguen siendo los del diseño y hay que reemplazarlos por los reales.
 - Los testimonios son de ejemplo: reemplazarlos por testimonios reales de las entrevistas de validación.
-- Falta la foto de Joan Payano Puchuri.
-- Videos About-the-Product y About-the-Team (entrega AV2).
+- Falta el video About-the-Product: agregar `docs/videos/About the product.mp4` y su sección en `index.html` (los textos `k174`-`k176` y los estilos `.video-frame` ya existen).
 
 ## Créditos
 

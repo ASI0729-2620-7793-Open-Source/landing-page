@@ -4,7 +4,7 @@
   --mint-100: #EBFAF6;
   --mint-200: #D3F1EB;
   --mint-300: #ACE6DD;
-  --green: #1F6F65;
+  --green: #1B635A;
   --peach: #F9E6D0;
   --cream: #FDF7F1;
   --page: #F7F6F4;
@@ -31,7 +31,11 @@ img { display: block; max-width: 100%; }
 a { color: inherit; text-decoration: none; }
 h1, h2, h3, p { margin: 0; }
 button { font-family: inherit; cursor: pointer; }
-:focus-visible { outline: 3px solid var(--mint); outline-offset: 3px; }
+:focus-visible { outline: 3px solid var(--green); outline-offset: 3px; }
+/* Focus indicators keep at least 3:1 against light and dark backgrounds (WCAG 1.4.11). */
+.cta :focus-visible, footer :focus-visible, .problem-art :focus-visible, .quote.dark :focus-visible,
+.team-video-wrapper :focus-visible, .video-frame :focus-visible { outline-color: var(--mint); }
+.cta .contact-card :focus-visible { outline-color: var(--green); }
 
 .page { max-width: 1440px; margin: 0 auto; overflow: hidden; }
 .container { margin-inline: auto; padding-inline: var(--gutter); }
@@ -67,13 +71,13 @@ button { font-family: inherit; cursor: pointer; }
   padding-top: 30px; padding-inline: 87px 60px;
 }
 .nav-links { display: flex; align-items: center; gap: 24px; font-size: 14px; }
-.nav-links a { padding: 4px 8px; border-radius: 4px; }
+.nav-links a { padding: 4px 8px; border-radius: 4px; white-space: nowrap; }
 .nav-links a:hover { color: var(--green); }
 .nav-right { justify-content: flex-end; gap: 22px; }
 .nav-logo img { width: 105px; height: 131px; object-fit: fill; }
-.nav-actions { display: flex; align-items: center; gap: 16px; margin-left: 10px; }
-.nav-actions .login { font-size: 16px; font-weight: 700; padding: 12px 8px; }
-.nav-actions .btn { padding: 9px 16px; font-size: 14px; }
+.nav-actions { display: flex; align-items: center; gap: 16px; margin-left: 10px; flex-shrink: 0; }
+.nav-actions .login { font-size: 16px; font-weight: 700; padding: 12px 8px; white-space: nowrap; }
+.nav-actions .btn { padding: 9px 16px; font-size: 14px; white-space: nowrap; }
 
 /* ---------- Hero ---------- */
 .hero {
@@ -283,6 +287,70 @@ button { font-family: inherit; cursor: pointer; }
 .member h3 { font-size: 16px; font-weight: 700; line-height: 1.3; }
 .member p { font-size: 14px; line-height: 1.45; }
 
+/* ---------- Video About the Team and About the product ---------- */
+.team-video-box {
+  margin-top: 56px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  padding: 44px 36px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.team-video-head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 24px;
+  max-width: 620px;
+}
+.team-video-head h3 {
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: -.01em;
+  color: var(--dark);
+}
+.team-video-head p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #4A5568;
+}
+.team-video-head .video-subtitle {
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 1.3;
+  color: var(--dark);
+}
+.team-video-wrapper,
+.video-frame {
+  width: 100%;
+  max-width: 860px;
+  aspect-ratio: 16 / 9;
+  background: var(--dark);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 55, 62, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.team-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 20px;
+}
+.team-video-wrapper p,
+.video-frame p {
+  color: #fff;
+  padding: 16px;
+  font-size: 14px;
+}
+
 /* ---------- CTA ---------- */
 .cta {
   background: var(--dark); border-radius: 20px; margin-inline: var(--gutter);
@@ -315,7 +383,7 @@ button { font-family: inherit; cursor: pointer; }
   width: 100%; border: 0; border-bottom: 1px solid var(--dark); background: transparent;
   min-width: 0; font: inherit; font-size: 18px; color: var(--dark); padding: 8px 0; outline: none; resize: none; margin-bottom: 30px;
 }
-.contact-form input:focus, .contact-form textarea:focus { border-bottom-color: var(--mint); border-bottom-width: 2px; }
+.contact-form input:focus, .contact-form textarea:focus { border-bottom-color: var(--green); border-bottom-width: 2px; }
 .contact-form textarea { height: 110px; }
 .contact-form .btn { align-self: center; padding: 15px 100px; font-size: 20px; margin-top: 6px; }
 
@@ -343,7 +411,7 @@ footer { position: relative; margin-top: 122px; background: var(--dark); color: 
 /* ---------- Accessibility & i18n additions ---------- */
 .skip-link { position: absolute; left: 16px; top: -64px; z-index: 100; background: var(--dark); color: #fff; padding: 12px 20px; border-radius: 999px; font-weight: 700; transition: top .15s ease; }
 .skip-link:focus { top: 12px; }
-.lang-switch { display: inline-flex; border: 1.5px solid var(--dark); border-radius: 999px; overflow: hidden; }
+.lang-switch { display: inline-flex; border: 1.5px solid var(--dark); border-radius: 999px; overflow: hidden; flex-shrink: 0; }
 .lang-btn { border: 0; background: transparent; color: var(--dark); font-size: 13px; font-weight: 700; padding: 8px 12px; min-width: 44px; min-height: 36px; }
 .lang-btn[aria-pressed="true"] { background: var(--dark); color: #fff; }
 .nav-toggle { display: none; width: 48px; height: 48px; border: 1.5px solid var(--dark); border-radius: 50%; background: transparent; align-items: center; justify-content: center; padding: 0; }
@@ -362,7 +430,7 @@ footer { position: relative; margin-top: 122px; background: var(--dark); color: 
 .faq-entry summary.faq-item::-webkit-details-marker { display: none; }
 .faq-entry[open] .plus::after { display: none; }
 .faq-answer { padding: 0 35px 28px; font-size: 17px; line-height: 1.5; }
-.contact-form input:focus-visible, .contact-form textarea:focus-visible { outline: 3px solid var(--mint); outline-offset: 4px; }
+.contact-form input:focus-visible, .contact-form textarea:focus-visible { outline: 3px solid var(--green); outline-offset: 4px; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition: none !important; animation: none !important; }
@@ -425,9 +493,24 @@ footer { position: relative; margin-top: 122px; background: var(--dark); color: 
   .benefit { padding: 40px 28px 260px; }
   .benefit img { right: 50%; transform: translateX(50%); }
   .team { grid-template-columns: 1fr 1fr; }
+  .team-video-box { padding: 28px 18px; border-radius: 24px; margin-top: 40px; }
+  .team-video-head h3 { font-size: 22px; }
+  .team-video-head p { font-size: 14px; }
   .cta h2 { font-size: 26px; }
   .contact-form .btn { padding: 15px 40px; }
   .footer-grid { grid-template-columns: 1fr; }
   .footer-two { grid-template-columns: 1fr 1fr; gap: 24px; }
   .footer-art { display: none; }
+}
+/* Anula los márgenes laterales fijados en el HTML para escritorio, que en pantallas
+   angostas aplastan el contenido. */
+@media (max-width: 1180px) {
+  main .container[style*="padding-inline"] { padding-inline: var(--gutter) !important; }
+}
+/* Pantallas angostas: las figuras del hero quedan arriba y abajo, sin tapar el texto. */
+@media (max-width: 560px) {
+  .hero { height: auto; }
+  .hero-content { padding: 150px 20px 180px; }
+  .hero-left { width: 105px; height: 155px; }
+  .hero-right { width: 100px; height: 140px; }
 }
